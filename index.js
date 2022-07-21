@@ -35,3 +35,20 @@ const replies = await inquirer.prompt([
 ]);
 
 }
+if(replies.position === 'Manager'){
+    const managerQuestions = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: 'Please enter your office number.'
+        }
+    ]);
+    //created manager object 
+    const incomingManager = setManager(
+        replies.name,
+        replies.id,
+        replies.email,
+        managerQuestions.officeNumber
+    );
+    EmployeeData.push(incomingManager);
+}
