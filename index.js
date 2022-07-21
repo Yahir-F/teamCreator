@@ -68,4 +68,23 @@ if(replies.position === 'Manager'){
         engineerAns.github
     );
     EmployeeData.push(incomingEngineer);
+
+
+} else if 
+(replies.position === 'Intern'){
+    const internReply = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What school are you attending?'
+        }
+    ]);
+    //created intern object 
+    const incomingIntern = new setIntern(
+        replies.name,
+        replies.id,
+        replies.email,
+        internAns.school
+    );
+    EmployeeData.push(incomingIntern);
 }
