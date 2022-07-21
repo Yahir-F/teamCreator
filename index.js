@@ -51,4 +51,21 @@ if(replies.position === 'Manager'){
         managerQuestions.officeNumber
     );
     EmployeeData.push(incomingManager);
+} else if 
+(replies.position === 'Engineer'){
+    const engineerAns = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'github',
+            message: 'enter your github username.'
+        }
+    ]);
+    //created engineer object 
+    const incomingEngineer = setEngineer(
+        replies.name,
+        replies.id,
+        replies.email,
+        engineerAns.github
+    );
+    EmployeeData.push(incomingEngineer);
 }
