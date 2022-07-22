@@ -1,10 +1,10 @@
 //Requriring modules
 const inquirer = require("inquirer");
-const fs = require("fs");
+// const fs = require("fs");
 
 //modules lib
-const Engineer = require('./lib/Engineer');
-const Intern = require('./lib/Intern');
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const Manager = require('./lib/Manager');
 
 const employeeData = [];
@@ -61,7 +61,7 @@ if(replies.position === "Manager"){
         }
     ])
     //created engineer object 
-    const incomingEngineer = setEngineer(
+    const incomingEngineer = new Engineer(
         replies.name,
         replies.id,
         replies.email,
@@ -79,7 +79,7 @@ if(replies.position === "Manager"){
         }
     ])
     //created intern object 
-    const incomingIntern = new setIntern(
+    const incomingIntern = new Intern(
         replies.name,
         replies.id,
         replies.email,
