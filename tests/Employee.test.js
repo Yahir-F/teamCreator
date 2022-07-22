@@ -18,3 +18,16 @@ test("Can set employee id", () => {
     expect(e.id).toBe(emp);
   });
   
+  test("Can set employee email", () => {
+    const emp = "placeholder@gmail.com";
+    const e = new Employee("the", 1, emp);
+    expect(e.email).toBe(emp);
+    });
+
+    test("Can set employee name", () => {
+        const emp = "Elmo";
+        const e = new Employee(emp);
+        expect(e.empName()).toBe(emp);
+    });
+
+        
