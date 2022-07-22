@@ -45,7 +45,7 @@ if(replies.position === "Manager"){
         }
     ])
     //created manager object 
-    const incomingManager =  new Manager(
+    const newManager =  new Manager(
         replies.name,
         replies.id,
         replies.email,
@@ -71,7 +71,7 @@ if(replies.position === "Manager"){
 
 
 } else if (replies.position === "Intern") {
-    const internReply = await inquirer.prompt([
+    const  internRep = await inquirer.prompt([
         {
             type: "input",
             name: "school",
@@ -83,7 +83,7 @@ if(replies.position === "Manager"){
         replies.name,
         replies.id,
         replies.email,
-        internAns.school
+        internRep.school
     );
     employeeData.push(incomingIntern);
     }
