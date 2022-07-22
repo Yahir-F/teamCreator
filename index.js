@@ -112,7 +112,7 @@ showQuestion();
 function createdTeam() {
     console.log("Incoming member", employeeData);
     fs.writeFileSync(
-  "./result/result.html",
+  "./result/resultpage.html",
 loadTeam(employeeData),
 );
 }
