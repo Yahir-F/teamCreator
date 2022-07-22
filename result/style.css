@@ -1,4 +1,15 @@
 .the-team {
-    background-color: #e84855;
+    background-color: #7d0898;
     color: #ffffff;
   }
+
+.employee-info{
+border: none;
+display: flex;
+margin: 2em;
+background-color: bisque;
+flex-direction: column;
+justify-content: space-between;
+width: 78;
+}
+
