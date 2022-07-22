@@ -1,6 +1,7 @@
 //Requriring modules
 const inquirer = require("inquirer");
-// const fs = require("fs");
+const fs = require("fs");
+const loadTeam = require ("./layout/layoutpage")
 
 //modules lib
 const Engineer = require("./lib/Engineer");
@@ -103,12 +104,17 @@ async function showQuestion() {
     if (addNewMember.addNewMember === "Create New Team Member") {
         return showQuestion();
     }
-    return teamCreate();
+    return createdTeam();
 }
 
 showQuestion(); 
 
-function teamCreate() {
-  
-};
+function createdTeam() {
+    console.log("Incoming member", employeeData);
+    fs.writeFileSync(
+  "./result/result.html",
+loadTeam(employeeData),
+);
+}
+
 
